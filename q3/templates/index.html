@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div>
+        <center>
+            <h1>Scientific Calculator</h1>
+            <h3>Operations that can be performed are:</h3>
+            <p>+,-,*,%,/,lcm,power</p>
+            <form action="/cal" method="POST">
+            <label for="n1">Number 1:</label>
+            <input name="n1" id="n1" type="number" required/> <br>
+            <label for="n2">Number 2:</label>
+            <input name="n2" id="n2" type="number"/> <br>
+            <label for="op">Operation:</label>
+            <input name="op" id="op" type="text" required/> <br>
+            <input type="submit" value="calculate">
+            </form>
+            <h1>RESULT:</h1>
+        <h2>{{value}}</h2>
+        </center>
+    </div>
+</body>
+</html>

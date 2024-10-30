@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+</head>
+<body>
+    <div>
+        <center>
+        <h1>Login</h1>
+        {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}    
+</center>
+</div>
+<div>
+        <center>
+            <form action="/login" method="POST">
+                <label for="name">Name:</label>
+                <input name="name" id="name" type="text" required/> <br>
+                <label for="password">Password:</label>
+                <input name="password" id="password" type="password" required/> <br>
+                <input type="submit" value="login">
+                </form>
+        </center>
+    </div>
+</body>
+</html>

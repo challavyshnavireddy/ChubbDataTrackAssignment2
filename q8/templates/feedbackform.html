@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEEDBACK</title>
+</head>
+<body>
+    <div>
+        <center>
+            <form action="/" method="POST">
+                <label for="name">Enter your name:</label>
+                <input id="name" name="name"> <br>
+                <label for="feedback">Enter your feedback:</label>
+                <textarea name="feedback" id="feedback"></textarea> <br>
+                <input type="submit" value="Submit">
+            </form>
+        </center>
+    </div>
+    <div>
+       <h2>Feedback History:</h2>
+       {% if history %}
+       {% for name, feedback in history.items() %}
+           <p><strong>{{ name }}:</strong> {{ feedback }}</p>
+       {% endfor %}
+   {% else %}
+       <p>No feedbacks yet</p>
+   {% endif %}
+    </div>
+</body>
+</html>
